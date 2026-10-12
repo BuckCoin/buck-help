@@ -11,8 +11,8 @@ header { border-bottom: 1px solid var(--line); }
 .header-inner, nav, main, footer { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 26px; }
 .brand { display: flex; align-items: center; gap: 16px; color: var(--text); text-decoration: none; font-weight: 600; }
-.logo-panel { display: inline-flex; background: var(--accent); padding: 10px 12px; border-radius: 8px; }
-.logo-panel img { display: block; width: 112px; height: auto; }
+.logo-panel { display: inline-flex; flex: 0 0 auto; }
+.logo-panel img { display: block; width: 48px; height: 48px; object-fit: contain; }
 .project-link { font-size: .9rem; }
 nav { display: flex; flex-wrap: wrap; gap: 6px 24px; padding-bottom: 17px; }
 nav a { display: inline-block; color: var(--muted); text-decoration: none; padding-block: 8px; font-size: .9rem; }
@@ -50,4 +50,4 @@ p { margin: 12px 0; }
 footer { border-top: 1px solid var(--line); padding-block: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: .85rem; }
 footer p { color: var(--muted); margin: 4px 0 0; }
 @media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .header-inner, nav, main, footer { width: calc(100% - 32px); } .header-inner { flex-wrap: wrap; gap: 16px; padding-block: 20px; } .brand { gap: 12px; font-size: .9rem; } nav { gap: 4px 18px; } main { padding-block: 36px; } .intro { margin-bottom: 32px; } .cards { grid-template-columns: 1fr; } .card, .article { padding: 24px; } .notice { padding: 20px; } .section-title { align-items: flex-start; flex-direction: column; gap: 4px; } footer { align-items: flex-start; flex-direction: column; } }
+@media (max-width: 600px) { .header-inner, nav, main, footer { width: calc(100% - 32px); } .header-inner { flex-wrap: wrap; gap: 16px; padding-block: 20px; } .brand { gap: 12px; font-size: .9rem; } .logo-panel img { width: 40px; height: 40px; } nav { gap: 4px 18px; } main { padding-block: 36px; } .intro { margin-bottom: 32px; } .cards { grid-template-columns: 1fr; } .card, .article { padding: 24px; } .notice { padding: 20px; } .section-title { align-items: flex-start; flex-direction: column; gap: 4px; } footer { align-items: flex-start; flex-direction: column; } }
