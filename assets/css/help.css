@@ -1,0 +1,53 @@
+/* BUCK 2.0 Help Center: no external fonts or dependencies. */
+:root { color-scheme: dark; --bg: #0C1118; --card: #14232B; --accent: #8EDEC0; --text: #FFFFFF; --muted: #B9C9CD; --line: #34464F; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 1rem/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+a { color: var(--accent); text-underline-offset: .25em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 5; padding: .75rem 1rem; background: var(--accent); color: var(--bg); }
+.skip-link:focus { top: 1rem; }
+header { border-bottom: 1px solid var(--line); }
+.header-inner, nav, main, footer { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-block: 26px; }
+.brand { display: flex; align-items: center; gap: 16px; color: var(--text); text-decoration: none; font-weight: 600; }
+.logo-panel { display: inline-flex; background: var(--accent); padding: 10px 12px; border-radius: 8px; }
+.logo-panel img { display: block; width: 112px; height: auto; }
+.project-link { font-size: .9rem; }
+nav { display: flex; flex-wrap: wrap; gap: 6px 24px; padding-bottom: 17px; }
+nav a { display: inline-block; color: var(--muted); text-decoration: none; padding-block: 8px; font-size: .9rem; }
+nav a[aria-current="page"] { color: var(--accent); box-shadow: 0 2px var(--accent); }
+main { padding-block: 64px; }
+.intro { max-width: 800px; margin-bottom: 48px; }
+.eyebrow { color: var(--accent); font-size: .75rem; letter-spacing: .16em; font-weight: 700; margin: 0 0 20px; }
+h1 { font-size: clamp(2.2rem, 5vw, 4.1rem); line-height: 1.12; letter-spacing: -.045em; margin: 16px 0 24px; }
+h2 { font-size: 1.3rem; line-height: 1.35; letter-spacing: -.02em; }
+p { margin: 12px 0; }
+.lead { color: var(--muted); font-size: 1.15rem; max-width: 660px; }
+.back { font-size: .9rem; }
+.section-title { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+.section-title h2 { margin: 0; }
+.section-title span { color: var(--muted); font-size: .85rem; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card { display: flex; flex-direction: column; padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; text-decoration: none; color: var(--text); }
+.card:hover { border-color: var(--accent); }
+.card-number { color: var(--accent); font-size: .8rem; }
+.card h2 { margin: 24px 0 4px; }
+.card p { color: var(--muted); margin: 8px 0 28px; }
+.card-action { color: var(--accent); font-size: .9rem; margin-top: auto; }
+.notice { margin-top: 32px; padding: 24px 28px; background: var(--card); border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0; }
+.notice h2 { margin: 0 0 8px; }
+.notice p { margin: 0; color: var(--muted); }
+.status { max-width: 740px; margin-top: 40px; }
+.status p { color: var(--muted); }
+.article { max-width: 780px; padding: 32px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.article h2 { margin: 32px 0 12px; }
+.article > h2:first-child { margin-top: 0; }
+.article p { color: var(--muted); }
+.article .notice { border: 1px solid var(--line); border-left: 4px solid var(--accent); margin-bottom: 28px; }
+.article .notice h2 { margin-top: 0; }
+.button { display: inline-block; background: var(--accent); color: var(--bg); padding: 12px 20px; border-radius: 6px; font-weight: 600; }
+footer { border-top: 1px solid var(--line); padding-block: 32px; display: flex; align-items: center; justify-content: space-between; gap: 24px; font-size: .85rem; }
+footer p { color: var(--muted); margin: 4px 0 0; }
+@media (max-width: 900px) { .cards { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .header-inner, nav, main, footer { width: calc(100% - 32px); } .header-inner { flex-wrap: wrap; gap: 16px; padding-block: 20px; } .brand { gap: 12px; font-size: .9rem; } nav { gap: 4px 18px; } main { padding-block: 36px; } .intro { margin-bottom: 32px; } .cards { grid-template-columns: 1fr; } .card, .article { padding: 24px; } .notice { padding: 20px; } .section-title { align-items: flex-start; flex-direction: column; gap: 4px; } footer { align-items: flex-start; flex-direction: column; } }
